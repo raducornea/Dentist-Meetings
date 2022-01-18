@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <TabPane prefHeight="720.0" prefWidth="1280.0" tabClosingPolicy="UNAVAILABLE" tabMinHeight="30.0" tabMinWidth="100.0">
+        <tabs>
+          <Tab text="Home">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF;">
+                     <children>
+                        <ImageView fitHeight="211.0" fitWidth="203.0" layoutX="539.0" layoutY="216.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/happy_tooth.jpg" />
+                           </image>
+                        </ImageView>
+                        <Text fill="#00eef2" layoutX="374.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bright Teeth" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="87.0" />
+                           </font></Text>
+                        <Button layoutX="194.0" layoutY="498.0" mnemonicParsing="false" onAction="#about" prefHeight="68.0" prefWidth="869.0" text="About Project" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Clients">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="0.0">
+                     <children>
+                        <TableView fx:id="clients_table_view" layoutX="283.0" layoutY="9.0" prefHeight="611.0" prefWidth="970.0">
+                          <columns>
+                            <TableColumn fx:id="client_id_column" prefWidth="41.0" text="ID" />
+                            <TableColumn fx:id="client_first_name_column" prefWidth="94.0" text="Frst Name" />
+                              <TableColumn fx:id="client_last_name_column" prefWidth="120.0" text="Last Name" />
+                              <TableColumn fx:id="client_pid_column" prefWidth="134.0" text="PID" />
+                              <TableColumn fx:id="client_birth_date_column" prefWidth="151.0" text="Birth Date" />
+                              <TableColumn fx:id="client_town_column" prefWidth="101.0" text="Town" />
+                              <TableColumn fx:id="client_country_column" minWidth="0.0" prefWidth="103.0" text="Country" />
+                              <TableColumn fx:id="client_email_column" prefWidth="224.0" text="Email" />
+                          </columns>
+                        </TableView>
+                        <VBox layoutX="21.0" layoutY="29.0" prefHeight="612.0" prefWidth="230.0">
+                           <children>
+                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="First Name" />
+                               <TextField fx:id="client_first_name_input" />
+                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Last Name" />
+                               <TextField fx:id="client_last_name_input" />
+                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="PID" />
+                               <TextField fx:id="client_pid_input" />
+                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Birth Date" />
+                               <TextField fx:id="client_birth_date_input" />
+                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Town" />
+                               <TextField fx:id="client_town_input" />
+                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Country" />
+                               <TextField fx:id="client_country_input" />
+                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Email" />
+                               <TextField fx:id="client_email_input" />
+                               <Text strokeType="OUTSIDE" strokeWidth="0.0" />
+                               <Button mnemonicParsing="false" onAction="#submit_client" prefHeight="78.0" prefWidth="230.0" text="Submit" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" />
+                              <Button mnemonicParsing="false" onAction="#edit_client" prefHeight="78.0" prefWidth="230.0" text="Edit" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" />
+                              <Button mnemonicParsing="false" onAction="#delete_client" prefHeight="78.0" prefWidth="230.0" text="Delete" />
+                           </children>
+                        </VBox>
+
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Dentists">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="0.0">
+                     <children>
+                        <TableView fx:id="dentists_table_view" layoutX="283.0" layoutY="9.0" prefHeight="611.0" prefWidth="970.0">
+                           <columns>
+                              <TableColumn fx:id="dentist_id_column" prefWidth="41.0" text="ID" />
+                              <TableColumn fx:id="dentist_first_name_column" prefWidth="94.0" text="Frst Name" />
+                              <TableColumn fx:id="dentist_last_name_column" prefWidth="120.0" text="Last Name" />
+                              <TableColumn fx:id="dentist_pid_column" prefWidth="134.0" text="PID" />
+                              <TableColumn fx:id="dentist_specialization_column" prefWidth="134.0" text="Specialization" />
+                              <TableColumn fx:id="dentist_qualification_column" prefWidth="118.0" text="Qualification" />
+                              <TableColumn fx:id="dentist_years_experience_column" minWidth="0.0" prefWidth="121.0" text="Years of Experience" />
+                              <TableColumn fx:id="dentist_email_column" prefWidth="206.0" text="Email" />
+                           </columns>
+                        </TableView>
+                        <VBox layoutX="21.0" layoutY="29.0" prefHeight="612.0" prefWidth="230.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="First Name" />
+                              <TextField fx:id="dentist_first_name_input" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Last Name" />
+                              <TextField fx:id="dentist_last_name_input" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="PID" />
+                              <TextField fx:id="dentist_pid_input" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Specialization" />
+                              <TextField fx:id="dentist_specialization_input" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Qualification" />
+                              <TextField fx:id="dentist_qualification_input" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Years of Experience" />
+                              <TextField fx:id="dentist_years_experience_input" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Email" />
+                              <TextField fx:id="dentist_email_input" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" />
+                              <Button mnemonicParsing="false" onAction="#submit_dentist" prefHeight="78.0" prefWidth="230.0" text="Submit" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" />
+                              <Button mnemonicParsing="false" onAction="#edit_dentist" prefHeight="78.0" prefWidth="230.0" text="Edit" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" />
+                              <Button mnemonicParsing="false" onAction="#delete_dentist" prefHeight="78.0" prefWidth="230.0" text="Delete" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Centres">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="0.0">
+                     <children>
+                        <TableView fx:id="centres_table_view" layoutX="283.0" layoutY="9.0" prefHeight="611.0" prefWidth="970.0">
+                           <columns>
+                              <TableColumn fx:id="centre_id_column" prefWidth="90.0" text="ID" />
+                              <TableColumn fx:id="centre_name_column" prefWidth="302.0" text="Name" />
+                              <TableColumn fx:id="centre_location_column" prefWidth="349.0" text="Location" />
+                              <TableColumn fx:id="centre_phone_column" prefWidth="228.0" text="Phone" />
+                           </columns>
+                        </TableView>
+                        <VBox layoutX="21.0" layoutY="29.0" prefHeight="612.0" prefWidth="230.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
+                              <TextField fx:id="centre_name_input" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Location" />
+                              <TextField fx:id="centre_location_input" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Phone" />
+                              <TextField fx:id="centre_phone_input" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" />
+                              <Button mnemonicParsing="false" onAction="#submit_centre" prefHeight="78.0" prefWidth="230.0" text="Submit" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" />
+                              <Button mnemonicParsing="false" onAction="#edit_centre" prefHeight="78.0" prefWidth="230.0" text="Edit" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" />
+                              <Button mnemonicParsing="false" onAction="#delete_centre" prefHeight="78.0" prefWidth="230.0" text="Delete" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Agreements">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="0.0">
+                     <children>
+                        <TableView fx:id="agreements_table_view" layoutX="377.0" layoutY="9.0" prefHeight="610.0" prefWidth="876.0">
+                           <columns>
+                              <TableColumn fx:id="agreement_id_column" prefWidth="53.0" text="ID" />
+                              <TableColumn fx:id="agreement_first_name_colum" prefWidth="193.0" text="First Name (Dentist)" />
+                              <TableColumn fx:id="agreement_last_name_colum" prefWidth="193.0" text="Last Name (Dentist)" />
+                              <TableColumn fx:id="agreement_name_column" prefWidth="231.0" text="Name (Centre)" />
+                              <TableColumn fx:id="agreement_phone_colum" prefWidth="205.0" text="Phone (Centre)" />
+                           </columns>
+                        </TableView>
+                        <VBox layoutX="21.0" layoutY="101.0" prefHeight="540.0" prefWidth="330.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Dentist Full Name" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" />
+                              <ChoiceBox fx:id="agreement_dentist_choicebox" prefHeight="25.0" prefWidth="476.0" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Centre Name and Phone" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" />
+                              <ChoiceBox fx:id="agreement_centre_choicebox" prefHeight="25.0" prefWidth="504.0" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" />
+                              <Button mnemonicParsing="false" onAction="#submit_agreement" prefHeight="78.0" prefWidth="450.0" text="Submit" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" />
+                              <Button mnemonicParsing="false" onAction="#delete_agreement" prefHeight="78.0" prefWidth="474.0" text="Delete" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Meetings">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="0.0">
+                     <children>
+                        <TableView fx:id="meetings_table_view" layoutX="352.0" layoutY="9.0" prefHeight="611.0" prefWidth="921.0">
+                           <columns>
+                              <TableColumn fx:id="meeting_client_first_name_column" prefWidth="94.0" text="First Name (C)" />
+                              <TableColumn fx:id="meeting_client_last_name_column" prefWidth="105.0" text="Last Name (C)" />
+                              <TableColumn fx:id="meeting_centre_name_column" prefWidth="135.0" text="Centre" />
+                              <TableColumn fx:id="meeting_centre_location_column" prefWidth="77.0" text="Location" />
+                              <TableColumn fx:id="meeting_dentist_first_name_column" prefWidth="100.0" text="First Name (D)" />
+                              <TableColumn fx:id="meeting_dentist_last_name_column" prefWidth="98.0" text="Last Name (D)" />
+                              <TableColumn fx:id="meeting_start_column" prefWidth="98.0" text="Start Time" />
+                              <TableColumn fx:id="meeting_end_column" prefWidth="98.0" text="End Time" />
+                              <TableColumn fx:id="meeting_problem_column" prefWidth="115.0" text="Problem" />
+                           </columns>
+                        </TableView>
+                        <VBox layoutX="8.0" layoutY="2.0" prefHeight="624.0" prefWidth="337.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Client Full Name and Email" />
+                              <ChoiceBox fx:id="meeting_client_choicebox" prefHeight="25.0" prefWidth="476.0" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Dentist Full Name &amp; Centre Name and Location" />
+                              <ChoiceBox fx:id="meeting_dentist_centre_choicebox" prefHeight="25.0" prefWidth="504.0" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Meeting Start Time" />
+                              <TextField fx:id="meeting_start_time_input" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Meeting End Time" />
+                              <TextField fx:id="meeting_end_time_input" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Meeting Problem" />
+                              <TextField fx:id="meeting_problem_input" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" />
+                              <Button mnemonicParsing="false" onAction="#submit_meeting" prefHeight="78.0" prefWidth="450.0" text="Submit" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" />
+                              <Button mnemonicParsing="false" onAction="#edit_meeting" prefHeight="78.0" prefWidth="474.0" text="Edit" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" />
+                              <Button mnemonicParsing="false" onAction="#delete_meeting" prefHeight="78.0" prefWidth="474.0" text="Delete" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Hint: Date Format must be like 27.02.2023 13:05" textAlignment="CENTER" wrappingWidth="336.423828125" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

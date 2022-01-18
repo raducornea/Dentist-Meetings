@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-150.0" maxWidth="-150.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="250.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Text fx:id="field_error" layoutX="18.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="More meetings might be affected and become innacurate in terms of meaning. Continue anyways?" textAlignment="CENTER" wrappingWidth="215.0" />
+      <Button layoutX="18.0" layoutY="92.0" mnemonicParsing="false" onAction="#close_stage_commit" prefHeight="26.0" prefWidth="100.0" text="Commit" />
+      <Button layoutX="135.0" layoutY="92.0" mnemonicParsing="false" onAction="#close_stage_rollback" prefHeight="26.0" prefWidth="100.0" text="Rollback" />
+   </children>
+</AnchorPane>

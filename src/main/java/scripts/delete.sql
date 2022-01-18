@@ -1,0 +1,11 @@
+drop table dentist_details;
+drop table client_details;
+drop table meetings;
+drop table clients;
+drop table agreements;
+drop table centres;
+drop table dentists;
+drop sequence agreement_id_sequence;
+drop sequence centre_id_sequence;
+drop sequence client_id_sequence;
+drop sequence dentist_id_sequence;
